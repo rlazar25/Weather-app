@@ -1,0 +1,107 @@
+/* rest css*/
+* {
+  font-family: sans-serif;
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+:root {
+  --mainColor: #0d347d;
+  --secondaryColor: #33708f;
+  --text: #fff
+}
+/* body */
+body {
+  background-color: var(--secondaryColor);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+/* container */
+.container {
+  width: 600px;
+  padding: 0 15px;
+}
+#weather {
+  color: var(--text);
+  text-align: center;
+}
+.top {
+  display: flex;
+  justify-content: space-around;
+  background-color: var(--mainColor);
+  border-bottom: 2px solid var(--secondaryColor);
+  border-radius: 20px 20px 0 0;
+  padding: 45px 20px;
+}
+.top-half {
+  width: 50%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+/* day date time */
+.date-time{
+    align-self: start;
+    display: flex;
+    justify-content: start;
+    align-items: start;
+    flex-direction: column;
+    gap: 5px;
+}
+.day{
+    font-size: 28px;
+}
+.date,
+.time{
+    font-size: 20px;
+}
+img{
+    width: 50%;
+    display: block;
+}
+/* bottom */
+.bottom {
+  background-color: var(--mainColor);
+  display: flex;
+  border-radius: 0 0 20px 20px;
+  justify-content: space-between;
+}
+.bottom-left,
+.bottom-right {
+  padding: 30px 60px;
+  width: 50%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  text-align: left;
+}
+.bottom-left {
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 5px;
+  border-right: 2px solid var(--secondaryColor);
+}
+.bottom-left :first-child {
+  font-size: 24px;
+  margin-bottom: 10px;
+}
+
+/* input */
+.city {
+  font-size: 40px;
+  width: 100%;
+  color: var(--text);
+  margin-bottom: 20px;
+  background: transparent;
+  border: none;
+  border-bottom: 2px solid gray;
+  transition: .3s ease all;
+}
+.city:focus{
+    outline: none;
+    border-bottom: 2px solid var(--secondaryColor);
+}
